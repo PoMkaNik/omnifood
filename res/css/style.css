@@ -29,6 +29,11 @@ html {
   visibility: hidden;
 }
 
+/* hidden class */
+.hidden {
+  display: none;
+}
+
 /* ------------------------ */
 /* REUSABLE COMPONENTS */
 /* ------------------------ */
@@ -199,7 +204,7 @@ header {
   height: 100vh;
 }
 
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-width: 1366px) {
   header {
     background-attachment: scroll;
   }
@@ -254,6 +259,19 @@ header {
   border-bottom: 2px solid #cf6d17;
 }
 
+/* Mobile navigation */
+.mobile-nav-icon {
+  float: right;
+  margin-top: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-menu {
+  font-size: 200%;
+  color: #fff;
+}
+
 /* Sticky navigation */
 .sticky {
   position: fixed;
@@ -262,7 +280,7 @@ header {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 2px #efefef;
-  z-index:10;
+  z-index: 10;
 }
 
 .sticky .main-nav {
@@ -407,7 +425,7 @@ header {
   color: #fff;
 }
 
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-width: 1366px) {
   .section-testimonials {
     background-attachment: scroll;
   }
@@ -620,4 +638,26 @@ footer p {
   color: #888;
   text-align: center;
   margin-top: 20px;
+}
+
+/* ------------------------ */
+/* ANIMATION */
+/* ------------------------ */
+
+.js--waypoint-1,
+.js--waypoint-2,
+.js--waypoint-3 {
+  opacity: 0;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+}
+.js--waypoint-4 {
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+}
+
+.js--waypoint-1.animate__animated,
+.js--waypoint-2.animate__animated,
+.js--waypoint-3.animate__animated {
+  opacity: 1;
 }

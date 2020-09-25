@@ -45,4 +45,53 @@ $(document).ready(function () {
       }
     });
   });
+
+  // Animation on scroll
+  // waypoint-1
+  $('.js--waypoint-1').waypoint(
+    function () {
+      $('.js--waypoint-1')
+        .addClass('animate__animated')
+        .addClass('animate__fadeIn');
+    },
+    { offset: '50%' },
+  );
+
+  //waypoint-2
+  $('.js--waypoint-2').waypoint(
+    function () {
+      $('.js--waypoint-2')
+        .addClass('animate__animated')
+        .addClass('animate__fadeInUp');
+    },
+    { offset: '50%' },
+  );
+
+  //waypoint-3
+  $('.js--waypoint-3').waypoint(
+    function () {
+      $('.js--waypoint-3')
+        .addClass('animate__animated')
+        .addClass('animate__fadeIn');
+    },
+    { offset: '50%' },
+  );
+
+  //waypoint-4
+  $('.js--waypoint-4').waypoint(
+    function () {
+      $('.js--waypoint-4')
+        .addClass('animate__animated')
+        .addClass('animate__pulse');
+    },
+    { offset: '50%' },
+  );
+
+  // Mobile navigation
+
+  $('.js--nav-icon').click(function () {
+    let nav = $('.js--main-nav');
+    nav.slideToggle(200);
+    $('ion-icon').toggleClass('hidden');
+  });
 });

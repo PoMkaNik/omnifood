@@ -6,16 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
   <title>Omnifood</title>
-
+  <!-- Normalize CSS -->
   <link rel="stylesheet" href="vendors/css/normalize.css">
+  <!-- GRID system CSS -->
   <link rel="stylesheet" href="vendors/css/grid.css">
+  <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap"
     rel="stylesheet">
+  <!-- Animated CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Own CSS -->
   <link rel="stylesheet" href="res/css/style.css">
   <link rel="stylesheet" href="res/css/queries.css">
   <!-- IonIcons -->
   <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -24,12 +35,16 @@
       <div class="row clearfix">
         <img class="logo" src="res/img/logo.png" alt="Omnifoot logo">
         <img class="logo-black" src="res/img/logo-black.png" alt="Omnifoot logo">
-        <ul class="main-nav">
+        <ul class="main-nav js--main-nav">
           <li><a href="#features">Food delivery</a></li>
           <li><a href="#works">How it works</a></li>
           <li><a href="#cities">Our cities</a></li>
           <li><a href="#plans">Sign up</a></li>
         </ul>
+        <a class="mobile-nav-icon js--nav-icon">
+          <ion-icon name="menu-outline" class="icon-menu"></ion-icon>
+          <ion-icon name="close-outline" class="icon-menu hidden"></ion-icon>
+        </a>
       </div>
     </nav>
     <div class="hero-text-box">
@@ -45,7 +60,7 @@
       <p class="long-copy">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur voluptates natus
         dignissimos reprehenderit minus neque placeat, eos maiores quas earum?</p>
     </div>
-    <div class="row clearfix">
+    <div class="row clearfix js--waypoint-1">
       <div class="col span_1_of_4 box">
         <ion-icon name="infinite-outline" class="icon-big"></ion-icon>
         <h3>Up to 365 days/year</h3>
@@ -128,7 +143,7 @@
     </div>
     <div class="row clearfix">
       <div class="col span_1_of_2 step-box">
-        <img src="res/img/iphone-app.png" alt="Omnifood app on iPhone" class="app-screen">
+        <img src="res/img/iphone-app.png" alt="Omnifood app on iPhone" class="app-screen js--waypoint-2">
       </div>
       <div class="col span_1_of_2 step-box">
         <div class="works-step">
@@ -156,7 +171,7 @@
     <div class="row clearfix">
       <h2>We're currently in these cities</h2>
     </div>
-    <div class="row clearfix">
+    <div class="row clearfix js--waypoint-3">
       <div class="col span_1_of_4 box">
         <img src="res/img/resized/lisbon.jpg" alt="">
         <h3>Lisbon</h3>
@@ -244,7 +259,7 @@
       <h2>Start eating healthy today</h2>
     </div>
     <div class="row clearfix">
-      <div class="col span_1_of_3">
+      <div class="col span_1_of_3 js--waypoint-4">
         <div class="plan-box">
           <div>
             <h3>Premium</h3>
@@ -352,7 +367,7 @@
             <label for="name">Name</label>
           </div>
           <div class="col span_2_of_3">
-            <input type="text" name="name" id="name" placeholder="Your name" required></input>
+            <input type="text" name="name" id="name" placeholder="Your name" required>
           </div>
         </div>
         <div class="row clearfix">
@@ -360,7 +375,7 @@
             <label for="email">Email</label>
           </div>
           <div class="col span_2_of_3">
-            <input type="email" name="email" id="email" placeholder="Your email" required></input>
+            <input type="email" name="email" id="email" placeholder="Your email" required>
           </div>
         </div>
         <div class="row clearfix">
@@ -381,7 +396,7 @@
             <label for="newsletter">Newsletter?</label>
           </div>
           <div class="col span_2_of_3">
-            <input type="checkbox" name="news" id="news" checked>Yes, please</input>
+            <input type="checkbox" name="news" id="news" checked>Yes, please
           </div>
         </div>
         <div class="row clearfix">
@@ -389,15 +404,15 @@
             <label for="message">Drop us a line</label>
           </div>
           <div class="col span_2_of_3">
-            <textarea type="checkbox" name="message" id="message" placeholder="Your message"></textarea>
+            <textarea name="message" id="message" placeholder="Your message"></textarea>
           </div>
         </div>
         <div class="row clearfix">
           <div class="col span_1_of_3">
-            <label for="">&nbsp;</label>
+            <label>&nbsp;</label>
           </div>
           <div class="col span_2_of_3">
-            <input type="submit" value="Send it!"></input>
+            <input type="submit" value="Send it!">
           </div>
         </div>
       </form>
